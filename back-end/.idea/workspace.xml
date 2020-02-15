@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="549e416a-0ce3-4d95-908c-f413f2e2d621" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
+    <list default="true" id="9420d6b4-ec62-408f-88b6-d4cdde03ee64" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/back_end_war_exploded.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Spring_5_2_3_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Spring_MVC_5_2_3_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,24 +15,10 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="spring-beans.schema" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="IgnoredFileRootStore">
-    <option name="generatedRoots">
-      <set>
-        <option value="$PROJECT_DIR$/.idea" />
-      </set>
-    </option>
-  </component>
-  <component name="ProjectId" id="1XcW2WaxiUBPymKzXvYKVEyU283" />
+  <component name="ProjectId" id="1XqCtrmJmaxF3xuzP45AfciHJjv" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -52,12 +41,12 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="549e416a-0ce3-4d95-908c-f413f2e2d621" name="Default Changelist" comment="" />
-      <created>1581345656623</created>
+      <changelist id="9420d6b4-ec62-408f-88b6-d4cdde03ee64" name="Default Changelist" comment="" />
+      <created>1581764455601</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1581345656623</updated>
-      <workItem from="1581345659665" duration="210000" />
+      <updated>1581764455601</updated>
+      <workItem from="1581764456837" duration="121000" />
     </task>
     <servers />
   </component>
