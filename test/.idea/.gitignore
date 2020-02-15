@@ -8,3 +8,4 @@ test.iml
 /build
 /local.properties
 target/
+.idea/**/workspace.xml
