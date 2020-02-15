@@ -2,7 +2,7 @@
   Created by IntelliJ IDEA.
   User: Seongjun
   Date: 2020/02/16
-  Time: 1:26 오전
+  Time: 1:43 오전
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>

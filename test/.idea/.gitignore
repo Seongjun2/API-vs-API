@@ -1,2 +1,10 @@
-# Default ignored files
-/workspace.xml
+.idea/
+test.iml
+/*.classpath
+/.classpath
+/.springBeans
+*.DS_Store
+*.iml
+/build
+/local.properties
+target/
