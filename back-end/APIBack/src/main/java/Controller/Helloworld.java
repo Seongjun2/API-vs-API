@@ -1,7 +1,6 @@
 package Controller;
 
-class MainController {
-
+class Helloworld{
     public static void main(String[] args) {
 
     }
