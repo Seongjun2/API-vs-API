@@ -1,19 +1,23 @@
 <template>
+  <div>
   <h2>Hello Vue</h2>
-
+  <h2>{{testString}}</h2>
+  </div>
 </template>
 
 <script>
-
+    import axios from 'axios'
     export default {
-      name: "Vuetest",
-        data:()=>{return{
+      data:()=>{return{
           testString:""
         }},
+      created() {
+        this.goTestPage()
+      },
       methods:{
         goTestPage(){
-          axios.get("http://localhost:8080/home.do")
-            .then(response => {
+          axios.get("http://192.168.35.21:8080/home.do").then(response => {
+            console.log(response)
               this.testString = response.data
             })
             .catch(e => {
