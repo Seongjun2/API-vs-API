@@ -1,4 +1,4 @@
-package com.gigamachim.APIvsAPIBack;
+package com.gigamachim.APIvsAPIBack.Controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
