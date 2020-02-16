@@ -1,5 +1,6 @@
 # Default ignored files
 /workspace.xml
+/artifacts/APIBack_war_exploded.xml
 
 # User-specific stuff
 .idea/**/workspace.xml
