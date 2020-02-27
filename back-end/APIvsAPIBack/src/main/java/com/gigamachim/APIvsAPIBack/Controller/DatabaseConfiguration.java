@@ -21,7 +21,7 @@ public class DatabaseConfiguration {
     @Configuration
     @MapperScan
             (
-                    basePackages = "saro.webtest.mybatis.mapper",
+                    basePackages = "com.gigamachim.APIvsAPIBack.Controller",
                     sqlSessionFactoryRef = "MyBatis_PostgreSQL_DataSource",
                     sqlSessionTemplateRef = "MyBatis_PostgreSQL_SqlSessionFactory"
             )
@@ -45,7 +45,7 @@ public class DatabaseConfiguration {
             sqlSessionFactoryBean.setDataSource(getDataSource());
             //xml 매핑을 위한 것이므로 xml을 통해 매핑하지 않는다면 생략 가
             sqlSessionFactoryBean.setMapperLocations(applicationContext.getResources("classpath:mybatis/mapper/*.xml"));
-            
+
             return sqlSessionFactoryBean.getObject();
         }
 
@@ -53,5 +53,6 @@ public class DatabaseConfiguration {
         public SqlSessionTemplate getSqlSessionTemplate() throws Exception{
             return new SqlSessionTemplate(getSqlSessionFactory());
         }
+
     }
 }
