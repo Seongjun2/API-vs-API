@@ -42,35 +42,6 @@
 			<scope>compile</scope>
 		</dependency>
 
-<!--		<dependency>-->
-<!--			<groupId>org.mybatis</groupId>-->
-<!--			<artifactId>mybatis-spring</artifactId>-->
-<!--			<version>2.0.3</version>-->
-<!--		</dependency>-->
-
-<!--		<dependency>-->
-<!--			<groupId>org.mybatis</groupId>-->
-<!--			<artifactId>mybatis</artifactId>-->
-<!--			<version>3.5.4</version>-->
-<!--		</dependency>-->
-
-<!--		<dependency>-->
-<!--			<groupId>org.postgresql</groupId>-->
-<!--			<artifactId>postgresql</artifactId>-->
-<!--			<version>42.2.9</version>-->
-<!--		</dependency>-->
-
-<!--		<dependency>-->
-<!--			<groupId>org.springframework</groupId>-->
-<!--			<artifactId>spring-jdbc</artifactId>-->
-<!--			<version>5.2.3.RELEASE</version>-->
-<!--		</dependency>-->
-
-		<!-- 히카리 CP -->
-		<dependency>
-			<groupId>com.zaxxer</groupId>
-			<artifactId>HikariCP</artifactId>
-		</dependency>
 		<!-- 포스트그레스큐엘 -->
 		<dependency>
 			<groupId>org.postgresql</groupId>
