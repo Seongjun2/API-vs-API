@@ -13,6 +13,7 @@ public class PersonDAO {
     private SqlSession sqlSession;
 
     public String selectName(){
-        return sqlSession.selectOne(NAMESPACE + "selectName");
+        System.out.println("test");
+        return sqlSession.selectOne("selectName");
     }
 }
