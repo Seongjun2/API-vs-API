@@ -6,10 +6,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 @RestController
 public class MainController {
+
 
     @RequestMapping(value="home.do",method = RequestMethod.GET)
     public String printHello(){
@@ -20,16 +23,15 @@ public class MainController {
         return "We go Vue";
     }
 
+
+
     @Autowired
-    Test2Dao test2Dao;
+    private PersonDAO personDAO;
 
     @RequestMapping(value = "/mybatis.do", method = RequestMethod.GET)
-    public String home(Model md){
-        List<Test2Dto> list = test2Dao.sel();
-        for (int i = 0; i < list.size(); i++) {
-            md.addAttribute("NAME", list.get(0).getName());
-        }
+    public String home(){
 
-        return "home";
+        return String.format("%s %s", personDAO.selectName(), LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME));
+//        return "home";
     }
 }
