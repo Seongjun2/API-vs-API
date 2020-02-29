@@ -34,4 +34,12 @@ public class MainController {
         return String.format("%s %s", personDAO.selectName(), LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME));
 //        return "home";
     }
+
+    @Autowired
+    private TestDAO testDao;
+
+    @RequestMapping(value = "/aws.do", method = RequestMethod.GET)
+    public String aws(){
+        return String.format("%s %s", testDao.selectTestName(), LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME));
+    }
 }

@@ -5,4 +5,8 @@
     <select id="selectName" resultType="string">
         select name from person limit 1
     </select>
+
+    <select id="selectTestName" resultType="string">
+        select name from test limit 1
+    </select>
 </mapper>
