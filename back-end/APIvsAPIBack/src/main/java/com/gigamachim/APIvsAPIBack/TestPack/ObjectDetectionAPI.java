@@ -31,7 +31,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLConnection;
 
-public class APITest {
+public class ObjectDetectionAPI {
 
     StringBuffer reqStr = new StringBuffer();
     final String clientId = "tayx9y3qhl";
@@ -40,9 +40,10 @@ public class APITest {
     public void request(){
 
         try{
-            String paramName = "img1.jpg";
-            String imgFile = "../../../../resources/";
+            String paramName = "image";//파라미터 명
+            String imgFile = "src/main/resources/img/img1.jpg";
             File uploadFile = new File(imgFile);
+            System.out.println(uploadFile.getAbsolutePath());
             String apiURL = "https://naveropenapi.apigw.ntruss.com/vision-obj/v1/detect"; // 객체 인식
 
             URL url = new URL(apiURL);
