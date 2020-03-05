@@ -35,7 +35,7 @@ public class ObjectDetectionAPI {
 
     StringBuffer reqStr = new StringBuffer();
     final String clientId = "tayx9y3qhl";
-    final String client_secret = "nDhUmCucfswlzH2AqiCsNrtKehSPpawTDBcJIbxh";
+    final String clientSecret = "nDhUmCucfswlzH2AqiCsNrtKehSPpawTDBcJIbxh";
 
     public void request(){
 
@@ -55,9 +55,9 @@ public class ObjectDetectionAPI {
 
             //multipart request
             String boundary = "---" + System.currentTimeMillis() + "---";
-            con.setRequestProperty("Content-type", "multipart/form-data; boundary" + boundary);
+            con.setRequestProperty("Content-Type", "multipart/form-data; boundary=" + boundary);
             con.setRequestProperty("X-NCP-APIGW-API-KEY-ID", clientId);
-            con.setRequestProperty("X-NCP-APIGW-API-KEY", client_secret);
+            con.setRequestProperty("X-NCP-APIGW-API-KEY", clientSecret);
 
             OutputStream outputStream = con.getOutputStream();
             PrintWriter writer = new PrintWriter(new OutputStreamWriter(outputStream, "UTF-8"), true);
@@ -65,9 +65,9 @@ public class ObjectDetectionAPI {
 
             //file 추가
             String fileName = uploadFile.getName();
-            writer.append("---" + boundary).append(LINE_FEED);
+            writer.append("--" + boundary).append(LINE_FEED);
             writer.append("Content-Disposition: form-data; name=\"" + paramName + "\"; filename=\"" + fileName + "\"").append(LINE_FEED);
-            writer.append("Content-type: " + URLConnection.guessContentTypeFromName(fileName)).append(LINE_FEED);
+            writer.append("Content-Type: "  + URLConnection.guessContentTypeFromName(fileName)).append(LINE_FEED);
             writer.append(LINE_FEED);
             writer.flush();
 
