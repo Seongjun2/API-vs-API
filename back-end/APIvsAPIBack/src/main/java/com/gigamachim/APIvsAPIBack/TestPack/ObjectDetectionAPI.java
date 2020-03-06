@@ -112,4 +112,8 @@ public class ObjectDetectionAPI {
 
     }
 
+    public void fileOut(String response){
+
+    }
+
 }
