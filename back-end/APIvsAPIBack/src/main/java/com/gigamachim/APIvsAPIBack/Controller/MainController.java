@@ -1,7 +1,9 @@
 package com.gigamachim.APIvsAPIBack.Controller;
 
 import com.gigamachim.APIvsAPIBack.dao.*;
+import com.gigamachim.APIvsAPIBack.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,8 +12,11 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 @RestController
+@ComponentScan
 public class MainController {
 
+    @Autowired
+    private IUserService userService;
 
     @RequestMapping(value="home.do",method = RequestMethod.GET)
     public String printHello(){

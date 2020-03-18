@@ -1,13 +1,11 @@
 package com.gigamachim.APIvsAPIBack.dao;
 
-
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 @Repository
 public class PersonDAO {
-//    protected static final String NAMESPACE = "com.gigamachim.APIvsAPIBack.com.gigamachim.APIvsAPIBack.dao";
 
     @Autowired
     private SqlSession sqlSession;
