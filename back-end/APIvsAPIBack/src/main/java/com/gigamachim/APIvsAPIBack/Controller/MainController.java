@@ -1,7 +1,6 @@
 package com.gigamachim.APIvsAPIBack.Controller;
 
-import dao.PersonDAO;
-import dao.TestDAO;
+import com.gigamachim.APIvsAPIBack.dao.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
