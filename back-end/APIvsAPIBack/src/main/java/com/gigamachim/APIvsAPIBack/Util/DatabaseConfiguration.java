@@ -1,4 +1,4 @@
-package com.gigamachim.APIvsAPIBack.Controller;
+package com.gigamachim.APIvsAPIBack.Util;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;

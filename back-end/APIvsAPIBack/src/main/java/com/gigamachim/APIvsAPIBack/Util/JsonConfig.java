@@ -15,8 +15,6 @@ public class JsonConfig {
     }
 
     public String jsonBeautify(String JsonStr){
-//        JsonParser parser = new JsonParser();
-//        JsonObject json = parser.parse(JsonStr).getAsJsonObject();
         JsonObject jsonObject = StringToJson(JsonStr);
 
         Gson gson = new GsonBuilder().setPrettyPrinting().create();

@@ -1,4 +1,4 @@
-package com.gigamachim.APIvsAPIBack.Controller;
+package dao;
 
 
 import org.apache.ibatis.session.SqlSession;
@@ -6,14 +6,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class PersonDAO {
-    protected static final String NAMESPACE = "com.gigamachim.APIvsAPIBack.Controller";
+public class TestDAO {
+//    protected static final String NAMESPACE = "com.gigamachim.APIvsAPIBack.dao";
 
     @Autowired
     private SqlSession sqlSession;
 
-    public String selectName(){
+    public String selectTestName(){
         System.out.println("test");
-        return sqlSession.selectOne("selectName");
+        return sqlSession.selectOne("selectTestName");
     }
 }
