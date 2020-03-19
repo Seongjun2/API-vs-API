@@ -1,9 +1,8 @@
 package com.gigamachim.APIvsAPIBack.service;
 
-import com.gigamachim.APIvsAPIBack.dao.*;
-
+import com.gigamachim.APIvsAPIBack.model.User;
 import java.util.List;
 
 public interface IUserService {
-    String getName();
+    List<User> getAllUser();
 }

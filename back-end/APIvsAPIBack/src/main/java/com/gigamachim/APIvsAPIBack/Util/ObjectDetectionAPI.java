@@ -1,4 +1,4 @@
-package com.gigamachim.APIvsAPIBack.TestPack;
+package com.gigamachim.APIvsAPIBack.Util;
 /*
     요청 바디
     ______________________________________________________________
@@ -43,7 +43,7 @@ public class ObjectDetectionAPI {
             String paramName = "image";//파라미터 명
             String imgFile = "src/main/resources/img/img1.jpg";
             File uploadFile = new File(imgFile);
-            System.out.println(uploadFile.getAbsolutePath());
+//            System.out.println(uploadFile.getAbsolutePath());
             String apiURL = "https://naveropenapi.apigw.ntruss.com/vision-obj/v1/detect"; // 객체 인식
 
             URL url = new URL(apiURL);

@@ -1,19 +1,20 @@
 package com.gigamachim.APIvsAPIBack.dao;
 
-
+import com.gigamachim.APIvsAPIBack.model.User;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import java.util.List;
 
 @Repository
-public class TestDAO {
-//    protected static final String NAMESPACE = "com.gigamachim.APIvsAPIBack.com.gigamachim.APIvsAPIBack.dao";
+public class UserDao {
+
+    String ns = "apivsapi.user.";
 
     @Autowired
     private SqlSession sqlSession;
 
-    public String selectTestName(){
-        System.out.println("test");
-        return sqlSession.selectOne("selectTestName");
+    public List<User> getAllUser() {
+        return sqlSession.selectList(ns+"getAllUser");
     }
 }
