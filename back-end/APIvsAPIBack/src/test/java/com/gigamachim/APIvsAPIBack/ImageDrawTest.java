@@ -42,16 +42,42 @@ public class ImageDrawTest {
         JsonArray firstList = (JsonArray)detectionBoxes.get(0);
 
         for (int i = 0; i < firstList.size(); i++) {
-            System.out.println( (i+1) +" "+firstList.get(i));
+            System.out.println(firstList.get(i));
         }
 
-        for (int w = 0; w < x; w++) {
-            for (int h = 0; h < y; h++) {
-                image.setRGB(firstList.get(0).getAsInt()*320, firstList.get(1).getAsInt()*213, black);
-            }
+//        int a = (int)(firstList.get(0).getAsDouble()*320);
+//        int b = (int)(firstList.get(1).getAsDouble()*213);
+//        int c = (int)(firstList.get(2).getAsDouble()*320);
+//        int d = (int)(firstList.get(3).getAsDouble()*213);
+
+        int a = (int)(firstList.get(0).getAsDouble()*213)-1;
+        int b = (int)(firstList.get(1).getAsDouble()*320)-1;
+        int c = (int)(firstList.get(2).getAsDouble()*213)-1;
+        int d = (int)(firstList.get(3).getAsDouble()*320)-1;
+
+        System.out.println(a);
+        System.out.println(b);
+        System.out.println(c);
+        System.out.println(d);
+
+
+        for (int w = c; w >= a ; w--) {
+            image.setRGB(b, w, black);
         }
 
+        for (int w = c; w >= a ; w--) {
+            image.setRGB(d, w, black);
+        }
 
+        for (int h = d; h >= b ; h--) {
+            image.setRGB(h, a, black);
+        }
+
+        for (int h = d; h >= b ; h--) {
+            image.setRGB(h, c, black);
+        }
+
+        //file 로 저장.
         try{
             ImageIO.write(image, "jpg", new File("hello1.jpg"));
         }
