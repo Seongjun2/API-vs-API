@@ -17,6 +17,7 @@ public class ImageDrawTest {
 
     public static void main(String[] args) {
 
+        /*
         ImageDraw imageDraw = new ImageDraw();
         BufferedImage image = imageDraw.loadImage("src/main/resources/img/hello.jpg");//filepath
 
@@ -27,10 +28,9 @@ public class ImageDrawTest {
 
 
         String jsonString = "{\"predictions\": [{\"num_detections\": 1, \"detection_classes\": [1.0], \"detection_names\": [\"person\"], \"detection_scores\": [0.999369], \"detection_boxes\": [[0.141612, 0.283656, 1.0, 0.793158]]}]}";
-        JsonConfig jsonConfig = new JsonConfig();
-        JsonObject jsonObject = jsonConfig.StringToJson(jsonString);
+        JsonConfig jsonConfig = new JsonConfig(jsonString);
 
-        JsonArray predictions = (JsonArray)jsonObject.get("predictions");
+        JsonArray predictions = (JsonArray)jsonConfig.getJsonObject().get("predictions");
 
         JsonObject elements = (JsonObject) predictions.get(0);
         int numDetections = elements.get("num_detections").getAsInt();
@@ -44,11 +44,6 @@ public class ImageDrawTest {
         for (int i = 0; i < firstList.size(); i++) {
             System.out.println(firstList.get(i));
         }
-
-//        int a = (int)(firstList.get(0).getAsDouble()*320);
-//        int b = (int)(firstList.get(1).getAsDouble()*213);
-//        int c = (int)(firstList.get(2).getAsDouble()*320);
-//        int d = (int)(firstList.get(3).getAsDouble()*213);
 
         int a = (int)(firstList.get(0).getAsDouble()*213)-1;
         int b = (int)(firstList.get(1).getAsDouble()*320)-1;
@@ -85,6 +80,21 @@ public class ImageDrawTest {
             e.printStackTrace();
         }
         System.out.println();
+         */
+
+        String jsonString = "{\"predictions\": [{\"num_detections\": 1, \"detection_classes\": [1.0], \"detection_names\": [\"person\"], \"detection_scores\": [0.999369], \"detection_boxes\": [[0.141612, 0.283656, 1.0, 0.793158]]}]}";
+        JsonConfig jsonConfig = new JsonConfig(jsonString);
+
+        JsonArray detectionBoxes = jsonConfig.getDetectionBoxes();
+
+        String fileName = "hello.jpg";
+        String filePath = "src/main/resources/img/"+fileName;
+        ImageDraw imageDraw = new ImageDraw();
+        BufferedImage image = imageDraw.loadImage(filePath);//filepath
+
+        imageDraw.drawSquare(image, detectionBoxes);
+
+        imageDraw.fileOut(image, "jpg", "resultImage/"+fileName);
 
         /*
 
