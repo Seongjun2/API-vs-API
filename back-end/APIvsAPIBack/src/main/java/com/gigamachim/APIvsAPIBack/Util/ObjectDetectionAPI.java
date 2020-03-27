@@ -37,11 +37,12 @@ public class ObjectDetectionAPI {
     final String clientId = "tayx9y3qhl";
     final String clientSecret = "nDhUmCucfswlzH2AqiCsNrtKehSPpawTDBcJIbxh";
 
-    public void request(){
+    public String request(String filePath){
 
+        String result = "fail";
         try{
             String paramName = "image";//파라미터 명
-            String imgFile = "src/main/resources/img/hello.jpg";
+            String imgFile = filePath;
             File uploadFile = new File(imgFile);
 //            System.out.println(uploadFile.getAbsolutePath());
             String apiURL = "https://naveropenapi.apigw.ntruss.com/vision-obj/v1/detect"; // 객체 인식
@@ -101,6 +102,7 @@ public class ObjectDetectionAPI {
 
                 br.close();
                 System.out.println(response.toString());
+                result = response.toString();
             }
             else{
                 System.out.println("error");
@@ -110,6 +112,7 @@ public class ObjectDetectionAPI {
             e.printStackTrace();
         }
 
+        return result;
     }
 
     public void fileOut(String response){

@@ -6,6 +6,8 @@ public class APITest {
     public static void main(String[] args) {
         ObjectDetectionAPI objectDetectionAPI = new ObjectDetectionAPI();
 
-        objectDetectionAPI.request();
+        String fileName = "hello.jpg";
+        String filePath = "src/main/resources/img/"+fileName;
+        objectDetectionAPI.request(filePath);
     }
 }

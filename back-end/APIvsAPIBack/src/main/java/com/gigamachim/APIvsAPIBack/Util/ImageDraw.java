@@ -10,6 +10,13 @@ import java.io.File;
 public class ImageDraw {
 
     static int black = new Color(0,0,0).getRGB();
+    static int yellow = new Color(255,204,0).getRGB();
+    static int green = new Color(102,255,51).getRGB();
+    static int pink = new Color(255,0,255).getRGB();
+    static int blue = new Color(0,0,204).getRGB();
+    static int red = new Color(255,0,0).getRGB();
+
+    static int[] colors = {black, yellow, green, pink, blue, red};
 
     public BufferedImage loadImage(String url){
         BufferedImage image = null;
@@ -30,6 +37,7 @@ public class ImageDraw {
 
         System.out.println("Image Size = Width : " + width + ", Height : " + height);
         //객체들의 좌표
+
         for (int i = 0; i < detectionBoxes.size(); i++) {
             JsonArray box = (JsonArray)detectionBoxes.get(i);
 
@@ -40,24 +48,21 @@ public class ImageDraw {
             int maxHeight = (int)(box.get(2).getAsDouble()*height)-1;
             int maxWidth = (int)(box.get(3).getAsDouble()*width)-1;
 
+            if(minHeight == -1) minHeight++;
+            if(minWidth == -1) minWidth++;
+
             System.out.println("Width : " +minWidth + " ~ " + maxWidth);
             System.out.println("Height : " +minHeight + " ~ " + maxHeight);
 
-            //세로 줄(왼쪽)
+            //세로 줄
             for (int h = maxHeight; h >= minHeight ; h--) {
-                image.setRGB(minWidth, h, black);
+                image.setRGB(minWidth, h, colors[i%6]);
+                image.setRGB(maxWidth, h, colors[i%6]);
             }
-            //세로 줄(오른쪽)
-            for (int h = maxHeight; h >= minHeight ; h--) {
-                image.setRGB(maxWidth, h, black);
-            }
-            //가로 줄(아래)
+            //가로 줄
             for (int w = maxWidth; w >= minWidth ; w--) {
-                image.setRGB(w, minHeight, black);
-            }
-            //가로 줄(위)
-            for (int w = maxWidth; w >= minWidth ; w--) {
-                image.setRGB(w, maxHeight, black);
+                image.setRGB(w, minHeight, colors[i%6]);
+                image.setRGB(w, maxHeight, colors[i%6]);
             }
         }
     }
